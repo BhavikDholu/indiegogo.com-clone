@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <link rel="stylesheet" href="navbar.css">
+</head>
+<body>
+    <div id="navbar">
+        <div>
+            <img src="https://smartmicrooptics.com/wp-content/uploads/2017/09/indiegogo-logo.png" alt="">
+            <h3>Explore</h3>
+            <h3>What We Do</h3>
+            <img src="https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/search-512.png" alt="">
+        </div>
+        <div>
+            <a href=""><h3>For Entrepreneurs</h3></a>
+            <a href=""><h3>Start a Campaing</h3></a>
+            <a href=""><h3>Log In</h3></a>
+            <a href=""><h3>Sign Up</h3></a>
+        </div>
+    </div>
+    <div id="slider">
+        <img id="img" src="https://c1.iggcdn.com/indiegogo-media-prod-cld/image/upload/f_auto/v1658245274/qeg3izrxrngmn1rnhiju.jpg" alt="">
+       <div>
+        <h3>GOGOPICKS</h3>
+        <h4 id="L1">X300</h4>
+        <h4 id="L2">Wireless,Portable LED Projectror & Speaker</h4>
+        <h4>SEE CAMPAIGN</h4>
+        <button id="left"><</button>
+        <button id="right">></button>
+       </div>
+    </div>
+    <div id="text">
+        <h1>Find it first on Indiegogo.</h1>
+        <p>Indiegogo is where early adopters and innovation seekers find lively, imaginative tech before it hits the mainstream.</p>
+        <button>SIGN UP NOW</button>
+        <button>LEARN MORE</button>
+  
+    </div>
+    <div id="popular">
+        <h1>Popular Projects</h1>
+        <div id="project">
+        
+        </div>
+    </div>  
+
+ <script>
+    let data = [
+        {
+            img : "https://c1.iggcdn.com/indiegogo-media-prod-cld/image/upload/f_auto/v1658244913/mloerh9s6w3vjaqfqddv.jpg",
+            l1 : "Just Launched! PIX NII",
+            l2 : "Most Powerful Mini PC With Dual 4K HDMI",
+        },
+        {
+            img : "https://c1.iggcdn.com/indiegogo-media-prod-cld/image/upload/f_auto/v1658244749/flc5yf33kcubwtirrfyd.jpg",
+            l1 : "Just Launched! Paris Rhone Laser Projector",
+            l2 : "Bring The Cinema Home"
+        },
+        {
+            img : "https://c1.iggcdn.com/indiegogo-media-prod-cld/image/upload/f_auto/v1658245112/jczdjyod9b8gdujqvbym.jpg",
+            l1 : "ENGWE X26",
+            l2 : "All-Terrain E-Bike:62Mile Longest Range"
+        },
+        {
+           img : "https://c1.iggcdn.com/indiegogo-media-prod-cld/image/upload/f_auto/v1658245274/qeg3izrxrngmn1rnhiju.jpg",
+           l1 : "X300",
+           l2 : "Wireless,Portable LED Projectror & Speaker"
+        }
+    ]
+   let count=0;
+   let rightBtn = document.getElementById("right");
+   rightBtn.addEventListener("click",function(){
+     count++;
+     if(count == data.length){
+        count=0;
+     }
+     let image = document.getElementById("img");
+     image.src = data[count].img;
+     let L1 = document.querySelector("#L1");
+     L1.innerText = data[count].l1;
+     let L2 = document.querySelector("#L2");
+     L2.innerText = data[count].l2;
+
+   })
+   let leftBtn = document.getElementById("left");
+   leftBtn.addEventListener("click",function(){
+     count--;
+     if(count<0){
+        count=data.length-1
+     }
+     let image = document.getElementById("img");
+     image.src = data[count].img;
+     let L1 = document.querySelector("#L1");
+     L1.innerText = data[count].l1;
+     let L2 = document.querySelector("#L2");
+     L2.innerText = data[count].l2;
+   })
+ </script>
+ <script>
+    let projectData = [
+        {
+            image : "https://c1.iggcdn.com/indiegogo-media-prod-cld/image/upload/c_fit,w_auto,g_center,q_auto:best,dpr_1.0,f_auto/n4o1ewux6zcyq8vxzj8t",
+            l1 : "FUNDING",
+            l2 : "Castles & Crusades Character Manager",
+            l3 : "An APP for mobile and desktop that allows you to generate and advance characters in C&C",
+            l4 : "TABLETOP GAMES",
+            l5 : "$2,505 USD Raised",
+            pro : "70",
+            l6 : "17 days leftt"
+        },
+        {
+            image : "https://c1.iggcdn.com/indiegogo-media-prod-cld/image/upload/c_fit,w_auto,g_center,q_auto:best,dpr_1.0,f_auto/xbe8fhfxafsvjxvw6ydo",
+            l1 : "FUNDING",
+            l2 : "A series of instructions for game lovers",
+            l3 : "Who could refuse to play a game when they're bored",
+            l4 : "TABLETOP GAMES",
+            l5 : "$2,015 USD Raised",
+            pro : "100",
+            l6 : "10 days leftt"
+        },
+        {
+            image : "https://c1.iggcdn.com/indiegogo-media-prod-cld/image/upload/c_fit,w_auto,g_center,q_auto:best,dpr_1.0,f_auto/hsuak6etlkjhpxog1e1u",
+            l1 : "FUNDING",
+            l2 : "Castles & Crusades Character Manager",
+            l3 : "An APP for mobile and desktop that allows you to generate and advance characters in C&C",
+            l4 : "TABLETOP GAMES",
+            l5 : "$128,549 USD Raised",
+            pro : "100",
+            l6 : "30 days leftt"
+        },
+        {
+            image : "https://c4.iggcdn.com/indiegogo-media-prod-cld/image/upload/c_fit,w_auto,g_center,q_auto:best,dpr_1.0,f_auto/b2wudzlxsazgdegzceak",
+            l1 : "FUNDING",
+            l2 : "2nd Chance for CYBERFROG 2: REKT PLANET",
+            l3 : "The Groundbreaking Comics Crowdfunder goes to print, with one last opportunity to hop onboard!",
+            l4 : "COMICS",
+            l5 : "$101,197 USD Raised",
+            pro : "60",
+            l6 : "28 days leftt"
+        }
+    ];
+   
+    for(let i=0;i<projectData.length;i++){
+        let Div = document.createElement("div");
+        let img = document.createElement("img");
+        img.setAttribute("src",projectData[i].image);
+        let L1 = document.createElement("h4");
+        L1.innerText = projectData[i].l1;
+        let L2 = document.createElement("h3");
+        L2.innerText = projectData[i].l2;
+        let L3 = document.createElement("p");
+        L3.innerText = projectData[i].l3;
+        let L4 = document.createElement("h4");
+        L4.innerText = projectData[i].l4;
+        let L5 = document.createElement("h4");
+        L5.innerText = projectData[i].l5;
+        let prog = document.createElement("progress");
+        prog.setAttribute("max","100");
+        prog.value = projectData[i].pro;
+        let L6 = document.createElement("p");
+        L6.innerText = projectData[i].l6;
+        Div.append(img,L1,L2,L3,L4,L5,prog,L6);
+        document.getElementById("project").append(Div);
+    }
+
+ </script>
+</body>
+</html>
