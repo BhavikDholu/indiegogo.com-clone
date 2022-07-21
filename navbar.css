@@ -25,7 +25,7 @@
 }
 #slider{
     width: 100%;
-    height: 450px;
+    height: 470px;
     margin: auto;
     position: relative;
 }
@@ -122,4 +122,35 @@
 #project img+h4{
     color: green;
     margin-bottom: -10px;
+}
+#poster{
+    width: 95%;
+    margin: auto;
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px 30px;
+}
+#imgSection{
+    height: 60vh;
+    position: relative;
+    text-align: center;
+}
+#imgSection>img{
+    width: 100%; 
+    height: 100%;
+    filter:brightness(50%)  
+}
+#imgSection>h1{
+    position: absolute;
+    bottom: 40%;  
+    color: #fff;
+    left: 20%; 
+    font-size: 40px; 
+}
+#poster>div>div+div{
+    display: flex;
+    justify-content: space-between;
+    margin-top: -10px;
+    color: rgb(66, 64, 64);
 }
