@@ -45,7 +45,8 @@
          if(obj.Email==ele.Email && obj.pass==ele.password){
             flag=false;
            localStorage.setItem("logindata",JSON.stringify(ele));
-          return alert("sign in successful.");
+           alert("sign in successful.");
+           window.location.href="./index.html";
          }
         })
         if(flag){

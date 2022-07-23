@@ -16,7 +16,7 @@
   <body>
     <div id="navbar">
       <div>
-        <img
+        <img id="logo"
           src="https://smartmicrooptics.com/wp-content/uploads/2017/09/indiegogo-logo.png"
           alt=""
         />
@@ -50,12 +50,12 @@
       </div>
     </div>
     <div id="video">
-      <video controls width="100%">
-        <source src="https://youtu.be/2Tz_C14M6z0" type="video/webm" />
+      <video controls autoplay width="100%">
+        <source src="https://youtu.be/2Tz_C14M6z0" type="video/webm">
         <source
           src="https://www.youtube.com/watch?v=2Tz_C14M6z0"
           type="video/mp4"
-        />
+        >
       </video>
     </div>
     <div id="fundSection">
@@ -328,4 +328,23 @@
     </div>
   </body>
 </html>
+<script>
+  let logo = document.querySelector("#logo");
+  logo.addEventListener("click",function(){
+    window.location.href="./index.html"
+  })
+</script>
+<script>
+  let personData =  JSON.parse(localStorage.getItem("logindata")) || "";
+  if(personData != []){
+    document.querySelector("#navbar>div:nth-child(2)").innerHTML = "";
+      let c1 = document.createElement("h3");
+      c1.innerText = "For Entrepreneurs";
+      let c2 = document.createElement("h3");
+      c2.innerText = "Start a Campaing";
+      let name = document.createElement("h2");
+      name.innerText = "Hello, "+personData.FirstName;
+      document.querySelector("#navbar>div:nth-child(2)").append(c1,c2,name);
+  }
+</script>
 

@@ -16,15 +16,15 @@
           alt=""
         />
         <h3>Explore</h3>
-        <a href="./WhatWeDo.html">What We Do</a>
+        <a href="./WhatWeDo.html"><h3>What We Do</h3></a>
         <img
           src="https://cdn2.iconfinder.com/data/icons/ios-7-icons/50/search-512.png"
           alt=""
         />
       </div>
       <div>
-        <a href=""><h3>For Entrepreneurs</h3></a>
-        <a href=""><h3>Start a Campaing</h3></a>
+        <h3>For Entrepreneurs</h3>
+        <h3>Start a Campaing</h3>
         <a href="./login.html"><h3>Log In</h3></a>
         <a href="./signup.html"><h3>Sign Up</h3></a>
       </div>
@@ -525,6 +525,19 @@
         L6.innerText = projectData[i].l6;
         Div.append(img, L1, L2, L3, L4, L5, prog, L6);
         document.getElementById("project").append(Div);
+      }
+    </script>
+    <script>
+      let personData =  JSON.parse(localStorage.getItem("logindata")) || "";
+      if(personData !== ""){
+        document.querySelector("#navbar>div:nth-child(2)").innerHTML = "";
+          let c1 = document.createElement("h3");
+          c1.innerText = "For Entrepreneurs";
+          let c2 = document.createElement("h3");
+          c2.innerText = "Start a Campaing";
+          let name = document.createElement("h2");
+          name.innerText = "Hello, "+personData.FirstName;
+          document.querySelector("#navbar>div:nth-child(2)").append(c1,c2,name);
       }
     </script>
   </body>
