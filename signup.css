@@ -1,0 +1,83 @@
+body>div{
+    width: 35%;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    margin: auto;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+form{
+    width: 75%;
+    margin: auto;
+    text-align: left;
+    padding: 10px 5%;
+    padding-left: 8%;
+}
+input{
+    margin-bottom: 15px;
+    width: 95%;
+    height: 40px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(182, 182, 182);
+}
+label{
+    font-size: 1.2rem;
+    color: #2f2f2f;
+}
+#checkbox1,#checkbox2{
+    width: 13px;
+    margin-top: 15px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+form div{
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
+form>div>label{
+    font-size: 18px;
+}
+form>div a{
+    color: #e51075;
+}
+#robotBox{
+    width: 85%;
+    height: 70px;
+    margin: auto;
+    display: flex;
+    gap: 10px;
+    margin-top: 25px;
+    background-color: rgba(236, 230, 230,0.5);
+}
+#robot{
+    width: 25px;
+    margin-top: 5%;
+}
+#robotBox>img{
+    height: 90%;
+    margin-left: 40px;
+}
+#login{
+    margin-top: 30px;
+    background-color: #E51075;
+    color: white;
+    border: none;
+}
+form>p{
+    text-align: center;
+    margin-top: -10px;
+    margin-bottom: -10px;
+    color: grey;
+}
+#fb{
+    color: white;
+    background-color: #405c9d;
+    border: none;
+}
+form+p{
+    margin-top: 15px;
+    color: #2f2f2f;
+    font-size: 18px;
+}
