@@ -11,6 +11,11 @@
     align-items: center;
     justify-content: space-around;
 }
+#navbar>div:nth-child(1)>a{
+    font-weight: bold;
+    color: black;
+    text-decoration: none;
+}
 #navbar>div>img{
     height: 42%;   
 }
