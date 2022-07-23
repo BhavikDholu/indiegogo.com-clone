@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup page</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+    <div>
+        <h1>Welcome!</h1>
+        <p>Sign up to join indiegogo.</p>
+        <form action="">
+            <label for="">First Name</label><br>
+            <input type="text" id="FirstName" placeholder="Your First Name" required><br>
+            <label for="">Last Name</label><br>
+            <input type="text" id="LastName" placeholder="Your Last Name" required><br>
+            <label for="">Email</label><br>
+            <input type="email" id="email" placeholder="Your Email" required><br>
+            <label for="">Password</label><br>
+            <input type="password" id="password" placeholder="Password" required><br>
+            <div>
+                <input type="checkbox" name="newsletter" id="checkbox1">
+                <label for="newsletter">Sign me up for indiegogo newsletter</label>
+            </div>
+            <div>
+                <input type="checkbox" id="checkbox2" required>
+                <label for="">I agree to the <a href="">Terms of Use</a> and have read and understand the <a href="">Privacy Policy</a></label>
+            </div>
+            <div id="robotBox">
+                <input type="checkbox" id="robot" required>
+                <label for="">I'm not a robot</label>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/RecaptchaLogo.svg/1200px-RecaptchaLogo.svg.png" alt="">
+            </div>
+            <input id="login" type="submit" value="LOG IN"><br>
+            <p>OR</p><br>
+            <input type="submit" id="fb" value="CONTINUE WITH FACEBOOK"><br>
+            <P>No post without your permission</P><br>
+        </form>
+        <p>Already have an account? <a href="login.html">Log In</a></p>
+    </div>
+</body>
+</html>
+<script>
+    let form = document.querySelector("form");
+    form.addEventListener("submit",getdata);
+    let data = JSON.parse(localStorage.getItem("UserData")) || [];
+    function getdata(){
+        event.preventDefault();
+        let obj = {
+            FirstName : form.FirstName.value,
+            LastName : form.LastName.value,
+            Email : form.email.value,
+            password : form.password.value,
+        }
+       data.push(obj);
+       localStorage.setItem("UserData",JSON.stringify(data));
+       window.location.href = "login.html"
+    }
+</script>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div>
+        <h1>Welcome back!</h1>
+        <p>Log in to continue.</p>
+        <form action="">
+            <label for="">Email</label><br>
+            <input type="email" placeholder="Your email" id="email"><br>
+            <label for="">Password</label><br>
+            <input type="password" placeholder="Password" id="password"><br>
+            <a href="">Forgot your password?</a><br>
+            <input id="login" type="submit" value="LOG IN"><br>
+            <p>OR</p><br>
+            <input type="submit" id="fb" value="CONTINUE WITH FACEBOOK"><br>
+            <P>No post without your permission</P><br>
+        </form>
+        <p>New to indiegogo? <a href="signup.html">Sign Up</a></p>
+    </div>
+</body>
+</html>
+<script>
+    let form = document.querySelector("form");
+    form.addEventListener("submit",getdata);
+    let user = JSON.parse(localStorage.getItem("UserData"))||[];
+
+    function getdata(){
+        event.preventDefault();
+        let obj = {
+            Email : form.email.value,
+            pass : form.password.value,
+        }
+        check(user,obj)
+    }
+    function check(data,obj){
+        let flag=true;
+        data.forEach(function(ele){
+         if(obj.Email==ele.Email && obj.pass==ele.password){
+            flag=false;
+           localStorage.setItem("logindata",JSON.stringify(ele));
+          return alert("sign in successful.");
+         }
+        })
+        if(flag){
+            return alert("please check your email or password")
+        }
+    }
+</script>
