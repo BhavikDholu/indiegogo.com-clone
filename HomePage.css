@@ -154,3 +154,101 @@
     margin-top: -10px;
     color: rgb(66, 64, 64);
 }
+#poster2{
+    margin: auto;
+    width: 90%;
+    margin-top: 40px;
+    position: relative;
+}
+#poster2>img{
+    width: 100%;
+}
+#poster2>div{
+    width: 50%;
+    text-align: center;
+    position: absolute;
+    top: 20%;
+    left:25%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#poster2>div>p:nth-child(2){
+    text-align: left;
+    color: #2a2a2a;
+    margin-bottom: 40px;
+}
+#categories{
+    text-align: center;
+    margin-top: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#categories>div>button{
+    padding: 10px 15px;
+}
+#categories svg{
+    color: #E51075;  
+    width: 60px;
+    height: 60px; 
+}
+#categories>div:nth-child(2){
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    width: 85%;
+    margin: auto;
+    gap: 30px;
+    font-size: 12px;
+    margin-top: 20px;
+}
+#review{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 50px;
+}
+#review>div{
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    margin: auto;
+    margin-top: 50px;
+    text-align: left;
+}
+#review>div img{
+    width: 100%;
+}
+#review>div p{
+    margin-top: -5px;
+    margin-bottom: -5px;
+    color: rgb(100, 100, 100);
+}
+#bottom{
+    margin-top: 40px;
+    height: 35vh;
+    position: relative;
+}
+#bottom>div{
+    text-align: center;
+    width: 60%;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#bottom button{
+    padding: 10px 20px;
+    font-weight: bold;
+}
+#bottom>div>button:nth-child(3){
+    color: white;
+    background-color: #E51075;
+    border: none;
+    margin-right: 20px;
+}
+#bottom>div>button:nth-child(4){
+    color: #E51075;
+    border: 1px solid #E51075;
+}
+#bottom>img{
+    position: absolute;
+    bottom: 5px;
+    left: 5%;
+    width: 20%;
+}
+
