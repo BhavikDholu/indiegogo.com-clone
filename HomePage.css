@@ -6,7 +6,7 @@
 }
 #navbar>div:nth-child(1){
     height: 100%;
-    width: 35%;
+    width: 40%;
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -20,7 +20,7 @@
 }
 #navbar>div:nth-child(2){
     display: flex;
-    width: 45%;
+    width: 50%;
     justify-content: space-around;
 }
 #navbar>div:nth-child(2)>a{
@@ -97,18 +97,20 @@
 }
 #project>div{
     box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    padding-bottom: 15px;
 }
 #project img{
     width: 100%;
     height: 50%;
+    margin-bottom: -13px;
 }
 #project>div>p{
     color: rgb(92, 91, 91);
-    margin-top: -8px;
+    margin-top: -10px;
     margin-left: 5%;
 }
 #project>div>progress{
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     margin-top: -10px;
     margin-left: 5%;
     width: 90%;
@@ -116,6 +118,7 @@
 #project>div>h4{
     margin-left: 5%;
     color: rgb(77, 73, 73);
+    margin-top: -8px;
 }
 #project>div>h3{
     margin-left: 5%;
@@ -135,22 +138,22 @@
     grid-template-columns: repeat(2,1fr);
     gap: 20px 30px;
 }
-#imgSection{
+.imgSection{
     height: 60vh;
     position: relative;
     text-align: center;
 }
-#imgSection>img{
+.imgSection>img{
     width: 100%; 
     height: 100%;
     filter:brightness(50%)  
 }
-#imgSection>h1{
+.imgSection>h1{
     position: absolute;
     bottom: 40%;  
     color: #fff;
-    left: 20%; 
-    font-size: 40px; 
+    left: 18%; 
+    font-size: 38px; 
 }
 #poster>div>div+div{
     display: flex;
@@ -161,24 +164,26 @@
 #poster2{
     margin: auto;
     width: 90%;
+    /* padding-bottom: 20px; */
     margin-top: 40px;
     position: relative;
 }
 #poster2>img{
     width: 100%;
+    height: 100%;
 }
 #poster2>div{
     width: 50%;
     text-align: center;
     position: absolute;
-    top: 20%;
+    bottom: 16%;
     left:25%;
     font-family: Arial, Helvetica, sans-serif;
 }
 #poster2>div>p:nth-child(2){
     text-align: left;
     color: #2a2a2a;
-    margin-bottom: 40px;
+    margin-bottom: 27px;
 }
 #categories{
     text-align: center;
